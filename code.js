@@ -4,5 +4,11 @@
 
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
-  
+
+  function putPoint(e) {
+    context.arc();
+  }
+
+  canvas.addEventListener('mousedown', putPoint);
+
 })()
