@@ -9,9 +9,14 @@
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
 
+  // Sets line to twice radius (full diameter)
+  context.lineWidth = radius * 2 ;
+
   function putPoint(e) {
     if(dragging){
+      // Line connects to dots
       context.lineTo(e.clientX, e.clientY);
+      context.stroke();
       context.beginPath();
 
       // These are the arc method's parameters:
