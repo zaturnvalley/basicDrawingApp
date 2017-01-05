@@ -1,5 +1,5 @@
 (function(){
-  // grab canvas by id
+  // Grab canvas by id
   var canvas = document.getElementById('canvas');
   var context = canvas.getContext('2d');
 
@@ -11,17 +11,17 @@
   function putPoint(e) {
     context.beginPath();
 
-    // these are the arc parameters
+    // These are the arc method's parameters:
     // context.arc(x, y, radius, start, end, rotate (true or false));
 
-    // this will build a full circle using starting at 0 and going to 2 PI
-    context.arc(e.offsetX, e.offsetY, radius, 0, Math.PI*2);
+    // This will build a full circle using starting at 0 and going to 2 PI
+    context.arc(e.clientX, e.clientY, radius, 0, Math.PI*2);
 
-    //this will fill the circle fully
+    // This will fill the circle fully
     context.fill();
   }
 
-  // on mouse down, putPoint fires
+  // On mouse down, putPoint fires
   canvas.addEventListener('mousedown', putPoint);
 
 })();

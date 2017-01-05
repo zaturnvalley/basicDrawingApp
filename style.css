@@ -1,3 +1,7 @@
+/* Omits scroll bars */
 body {
   margin: 0;
+}
+canvas {
+  display: block;
 }
