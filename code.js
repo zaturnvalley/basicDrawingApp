@@ -42,6 +42,9 @@
   // Function sets dragging to false
   function disengage(){
     dragging = false;
+
+    // When done drawing, do not connect, begin anew
+    context.beginPath();
   }
   // Dragging activated on mousedown
   canvas.addEventListener('mousedown', engage);
