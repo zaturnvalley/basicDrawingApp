@@ -1,4 +1,3 @@
-(function(){
   // Grab canvas by id
   var canvas = document.getElementById('canvas');
   var context = canvas.getContext('2d');
@@ -52,5 +51,3 @@
   canvas.addEventListener('mouseup', disengage);
   // On mouse down, putPoint fires
   canvas.addEventListener('mousemove', putPoint);
-
-})();
