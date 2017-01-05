@@ -11,6 +11,7 @@
 
   function putPoint(e) {
     if(dragging){
+      context.lineTo(e.clientX, e.clientY);
       context.beginPath();
 
       // These are the arc method's parameters:
@@ -21,11 +22,17 @@
 
       // This will fill the circle fully
       context.fill();
+
+      // Establish Path, move to beginning
+      context.beginPath();
+      context.moveTo(e.clientX, e.clientY);
+
     }
   }
   // Function sets dragging to true
-  function engage(){
+  function engage(e){
     dragging = true;
+    putPoint(e);
   }
   // Function sets dragging to false
   function disengage(){
