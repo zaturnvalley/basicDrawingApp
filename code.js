@@ -4,6 +4,7 @@
   var context = canvas.getContext('2d');
 
   var radius = 10;
+  var dragging = false;
 
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
@@ -20,9 +21,20 @@
     // This will fill the circle fully
     context.fill();
   }
-
+  // Function sets dragging to true
+  function engage(){
+    dragging = true;
+  }
+  // Function sets dragging to false
+  function disengage(){
+    dragging = false;
+  }
+  // Dragging activated on mousedown
+  canvas.addEventListener('mousedown', engage);
+  // Dragging deactivated on mouseup
+  canvas.addEventListener('mouseup', disengage);
   // On mouse down, putPoint fires
-  canvas.addEventListener('mousedown', putPoint);
+  canvas.addEventListener('mousemove', putPoint);
 
   // // Grab buttons
   // var bigger = document.getElementById('bigger');
