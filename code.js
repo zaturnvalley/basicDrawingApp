@@ -24,4 +24,18 @@
   // On mouse down, putPoint fires
   canvas.addEventListener('mousedown', putPoint);
 
+  // // Grab buttons
+  // var bigger = document.getElementById('bigger');
+  // var smaller = document.getElementById('smaller');
+  // var normal = document.getElementById('normal');
+
+  // // Event Listeners for buttons
+  // bigger.addEventListener('click', radiusSize(15));
+  // smaller.addEventListener('click', radiusSize(5));
+  // normal.addEventListener('click', radiusSize(10));
+
+  // function radiusSize(radius){
+  //   return radius;
+  // }
+
 })();
