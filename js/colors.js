@@ -25,5 +25,5 @@ function setSwatch(e){
   setColor(swatch.style.backgroundColor);
 
   // Give active class via appending to class
-  swatch.className =+ ' active';
+  swatch.className = 'swatch active';
 }
