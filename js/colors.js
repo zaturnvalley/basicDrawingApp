@@ -12,6 +12,7 @@ function setColor(color) {
   context.strokeStyle = color;
   var active = document.getElementsbyClassName('active')[0];
   if (active) {
+    // omit active 
     active.className = 'swatch';
   }
 }
@@ -22,5 +23,7 @@ function setSwatch(e){
 
   // Set Color
   setColor(swatch.style.backgroundColor);
-  // Give active class
+
+  // Give active class via appending to class
+  swatch.className =+ ' active';
 }
