@@ -1,16 +1,16 @@
 // Grab array of all elems with class swatch
-var swatches = document.getElementsbyClassName('swatch');
+var swatches = document.getElementsByClassName('swatch');
 
 // Loop over array, cache value of n
-for (var i = 0; n = swatches.length; i < n; i++) {
-  swatches[i].addEventListener('click', setSwatch)
+for (var i = 0, n = swatches.length; i < n; i++) {
+  swatches[i].addEventListener('click', setSwatch);
 }
 
 // Sets color
 function setColor(color) {
   context.fillStyle = color;
   context.strokeStyle = color;
-  var active = document.getElementsbyClassName('active')[0];
+  var active = document.getElementsByClassName('active')[0];
   if (active) {
     // omit active 
     active.className = 'swatch';
