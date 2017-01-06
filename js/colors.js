@@ -1,9 +1,13 @@
-// Grab array of all elems with class swatch
-var swatches = document.getElementsByClassName('swatch');
+// Array of colors
+var colors = ['black', 'grey', 'white', 'red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet', 'pink']
 
-// Loop over array, cache value of n
-for (var i = 0, n = swatches.length; i < n; i++) {
-  swatches[i].addEventListener('click', setSwatch);
+// Create color divs dynammically
+for (var i = 0, n = colors.length; i<n; i++) {
+  var swatch = document.createElement('div');
+  swatch.className = 'swatch';
+  swatch.style.backgroundColor = colors[i];
+  swatch.addEventListener('click', setSwatch);
+  document.getElementById('colors').appendChild(swatch);
 }
 
 // Sets color
