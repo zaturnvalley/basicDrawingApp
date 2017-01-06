@@ -30,3 +30,5 @@ decRad.addEventListener('click', function(){
 incRad.addEventListener('click', function(){
   setRadius(radius+interval);
 });
+
+setRadius(defaultRad);
