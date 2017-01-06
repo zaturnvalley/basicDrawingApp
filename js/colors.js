@@ -31,3 +31,5 @@ function setSwatch(e){
   // Give active class via appending to class
   swatch.className = 'swatch active';
 }
+// Set color on load
+setSwatch({target: document.getElementsByClassName('swatch')[0]});
