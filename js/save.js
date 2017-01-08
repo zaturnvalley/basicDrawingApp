@@ -9,20 +9,21 @@ function saveImage() {
 
   // Takes 3 parameters: window.open(url, name, options);
   // Would be done like so, but will use ajax and php
-  // window.open(data, '_blank', 'location=0, menubar=0');
+  window.open(data, '_blank', 'location=0, menubar=0');
 
-  var request = new XMLHttpRequest();
+  // If php files were used, here's the process: 
+  // var request = new XMLHttpRequest();
 
-  request.onreadystatechange = function() {
-    if(request.readyState == 4 && request.status == 200) {
-      // do response
-      var response = request.responseText;
-      window.open(response, '_blank', 'location=0, menubar=0')
-    }
-  }
+  // request.onreadystatechange = function() {
+  //   if(request.readyState == 4 && request.status == 200) {
+  //     // do response
+  //     var response = request.responseText;
+  //     window.open('download.php?file='+reponse, '_blank', 'location=0, menubar=0')
+  //   }
+  // }
 
-  // true is a boolean for synchronus 
-  request.open('POST', 'save.php', true);
-  request.setRequestHeader('Content-type','application/x-www-form-urlencoded');
-  request.send('img='+data);
+  // // true is a boolean for synchronus 
+  // request.open('POST', 'save.php', true);
+  // request.setRequestHeader('Content-type','application/x-www-form-urlencoded');
+  // request.send('img='+data);
 }

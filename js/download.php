@@ -7,7 +7,7 @@ $file = $_GET['file'];
 header('Content-type: image/png');
 
 //tell php it's an attachment
-header("Content-disposition: attachment; filename='canvasoutput.png'");
+header("Content-disposition: attachment; filename=canvasoutput.png");
 //spit out file
 readfile($file);
 
