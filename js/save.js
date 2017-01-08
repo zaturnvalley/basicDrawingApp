@@ -17,7 +17,7 @@ function saveImage() {
     if(request.readyState == 4 && request.status == 200) {
       // do response
       var response = request.responseText;
-      console.log(response);g
+      window.open(response, '_blank', 'location=0, menubar=0')
     }
   }
 
