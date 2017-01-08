@@ -106,12 +106,6 @@ canvas {
   }
 }
 @media(max-width: 650px) {
-  #toolbar {
-    height: 70px;
-  }
-  #save {
-    float: left;
-  }
   .swatch {
     width: 15px;
     height: 15px;
