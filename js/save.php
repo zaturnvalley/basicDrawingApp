@@ -7,6 +7,11 @@ $data = str_replace(' ', '+', $data);
 
 $img = base64_decode($data);
 
-$path = 'img/' . uniqid() .
+$path = 'img/' . uniqid() . '.png';
+if(file_put_contents($path, $img)){
+  print $path;
+} else {
+  header("HTTP/1.1 500 Interal Server Error");
+}
 
 ?>
