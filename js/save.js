@@ -17,7 +17,7 @@ function saveImage() {
     if(request.readyState == 4 && request.status == 200) {
       // do response
       var response = request.responseText;
-      console.log(response);
+      console.log(response);g
     }
   }
 
