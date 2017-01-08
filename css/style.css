@@ -93,3 +93,27 @@ canvas {
   color: #5f5f5f;
   background-color: white;
 }
+@media(max-width: 750px) {
+  .swatch {
+    width: 25px;
+    height: 25px;
+  }
+}
+@media(max-width: 690px) {
+  .swatch {
+    width: 20px;
+    height: 20px;
+  }
+}
+@media(max-width: 650px) {
+  #toolbar {
+    height: 70px;
+  }
+  #save {
+    float: left;
+  }
+  .swatch {
+    width: 15px;
+    height: 15px;
+  }
+}
