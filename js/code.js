@@ -5,12 +5,12 @@
   var radius = 10;
   var dragging = false;
 
-  // If window gets resized, canvas will adjust
-  window.onresize = function() {
-    var image = context.getImageData(0, 0, canvas.width, canvas.height);
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    context.putImageData(image, 0,0);
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  // Clear function
+  function clearCanvas(canvas) {
+    canvas.width = canvas.width;
   }
 
   // Sets line to twice radius (full diameter)
