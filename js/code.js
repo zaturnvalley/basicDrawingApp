@@ -53,9 +53,10 @@
   canvas.addEventListener('mousemove', putPoint);
 
   // Clear function
-  function clearCanvas(canvas) {
+  function clearCanvas() {
     canvas.width = canvas.width;
+    context.lineWidth = radius * 2 ;
   }
   var clear = document.getElementById('clear');
 
-  clear.addEventListener('click', clearCanvas(canvas));
+  clear.addEventListener('click', clearCanvas);
