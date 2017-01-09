@@ -8,11 +8,6 @@
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
 
-  // Clear function
-  function clearCanvas(canvas) {
-    canvas.width = canvas.width;
-  }
-
   // Sets line to twice radius (full diameter)
   context.lineWidth = radius * 2 ;
 
@@ -56,3 +51,11 @@
   canvas.addEventListener('mouseup', disengage);
   // On mouse down, putPoint fires
   canvas.addEventListener('mousemove', putPoint);
+
+  // Clear function
+  function clearCanvas(canvas) {
+    canvas.width = canvas.width;
+  }
+  var clear = document.getElementById('clear');
+
+  clear.addEventListener('click', clearCanvas(canvas));
